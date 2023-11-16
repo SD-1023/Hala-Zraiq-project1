@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&display=swap");
+
+:root {
+    --brand-primary: #0768ac;
+    --brand-secondary: #03c180;
+    --bg_default: #ffffff;
+    --bg_body: #f0f9ff;
+    --lines-color: #dddddd;
+    --body-text: #333333;
+    --heart-color: #dc143c;
+}
+
+body.dark-mode {
+    background-color: var(--bg_body);
+    color: var(--body-text);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+    background-color: var(--bg_body);
+}
+
+a {
+    text-decoration: none;
+    color: var(--body-text);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 92%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.btn {
+    background-color: var(--bg_default);
+    border: 1px var(--lines-color) solid;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: var(--body-text);
+}
+
+/* nav start */
+
+nav {
+    padding: 20px 0px;
+    background-color: var(--bg_default);
+    box-shadow: -7px 7px 20px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
+}
+
+.link {
+    color: var(--brand-primary);
+    font-weight: 400;
+}
+
+.nav-buttons .row {
+    gap: 5px;
+}
+
+.nav-buttons ion-icon {
+    font-size: 14px;
+}
+
+/* nav end */
+
+/* title start */
+
+.title {
+    position: relative;
+    background-color: var(--bg_default);
+    width: 100%;
+}
+
+.blue_shape {
+    width: 0;
+    height: 0;
+    border-right: 90vw solid transparent;
+    border-bottom: 60px solid transparent;
+    border-top: 65px solid #087aabf2;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.green_shape {
+    width: 0;
+    height: 0;
+    border-left: 90vw solid transparent;
+    border-bottom: 60px solid transparent;
+    border-top: 65px solid var(--brand-secondary);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.title-content .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-content .title-welcome {
+    color: var(--brand-secondary);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* title end */
+
+/* search bar start */
+
+.search {
+    margin: 20px 0px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--bg_default);
+}
+
+.search-bar {
+    padding-left: 10px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding-left: 10px;
+    border: 0;
+    font-size: 16px;
+    height: 48px;
+    background-color: var(--bg_default);
+}
+
+.lists {
+    width: 30%;
+    display: flex;
+}
+
+.select-list {
+    width: 50%;
+    border-left: var(--lines-color) 1px solid;
+    height: 48px;
+    padding: 0px 10px 0px 0px;
+    box-sizing: border-box;
+}
+
+.select-list span {
+    font-size: 12px;
+    padding-bottom: 3px;
+    padding-left: 12px;
+}
+
+.select-list select {
+    border: 0px;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* search bar end */
+
+/* search result start */
+
+.search-result .row {
+    flex-wrap: wrap;
+    gap: 2.5%;
+    justify-content: start;
+}
+
+.card-result {
+    width: 18%;
+    margin-top: 30px;
+    background-color: var(--bg_default);
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-result .card-container {
+    padding: 15px 5%;
+}
+
+.card-result .img-container {
+    height: 140px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-result .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-result h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.card-result h4 {
+    height: 2.4em;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines of content */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-result .stars {
+    margin-bottom: 10px;
+    letter-spacing: -7px;
+}
+
+.card-result ion-icon,
+.details-section .stars,
+.favorites-bar .stars {
+    color: rgb(229, 164, 33);
+}
+
+.card-result p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    color: var(--body-text);
+}
+
+/* search result end */
+
+/* favorites start */
+
+.favorites-bar {
+    background-color: var(--bg_default);
+    padding: 18px 0px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: none;
+}
+
+.favorites-bar .row {
+    justify-content: start;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.favorites-bar .card {
+    width: 120px;
+    margin-top: 15px;
+    background-color: var(--bg_default);
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.favorites-bar .card .img-container {
+    height: 60px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.favorites-bar .card .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorites-bar .favorites-text {
+    padding: 5px 10px;
+}
+
+.favorites-bar .favorites-text h4 {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.favorites-text .stars {
+    letter-spacing: -5px;
+}
+
+/* favorites end */
+
+/* footer start */
+
+footer .container {
+    margin: 40px 0px;
+}
+
+footer .row {
+    justify-content: center;
+}
+
+footer ion-icon {
+    color: rgb(225, 10, 10);
+    font-size: 25px;
+    margin: 0px 5px;
+}
+
+
+
+.details-section {
+    background-color: var(--body-text);
+    padding: 30px 0px;
+}
+
+.details-container {
+    width: 60%;
+    margin: auto;
+    padding-right: calc(320px + 30px);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.details-section h3 {
+    color: var(--brand-secondary);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.details-section h4 {
+    color: var(--bg_default);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.details-section .stars {
+    letter-spacing: -7px;
+}
+
+.details-section .details-para {
+    color: var(--bg_default);
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* details section end */
+
+/* sub titles start */
+
+
+.subtitles-content {
+    background-color: var(--bg_default);
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: var(--lines-color) 1px solid;
+}
+
+.subtitles-content h4 {
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 8px;
+}
+
+.subtitles-content li {
+    padding: 15px 30px;
+    border-top: 1px var(--lines-color) solid;
+    display: flex;
+}
+
+.subtitles-content li p {
+    width: 90%;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.subtitles-content ion-icon {
+    margin-right: 15px;
+    color: var(--brand-secondary);
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+/* sub titles end */
+
+/* details card start */
+
+.details-card {
+    width: 320px;
+    overflow: hidden;
+    background-color: var(--bg_default);
+    border: 1.5px var(--bg_default) solid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0px 1px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-card .img-container {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.details-card .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-card .card-container1 {
+    padding: 18px;
+}
+
+.card-container1 .card-title {
+    padding-bottom: 10px;
+}
+
+.card-container1 .card-title span {
+    font-weight: 700;
+}
+
+.card-container1 .card-title a {
+    text-decoration: underline;
+    color: var(--brand-primary);
+}
+
+.card-container2 {
+    border: 1px var(--lines-color) solid;
+    padding: 20px 20px 10px 20px;
+}
+
+.card-container2 button {
+    background-color: var(--brand-secondary);
+    border: 0;
+    padding: 15px 20px;
+    color: var(--bg_body);
+    font-size: 20px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-container2 .card-end {
+    color: #757272;
+    font-size: 12px;
+    text-align: center;
+}
+
+.card-container2 ion-icon {
+    font-size: 30px;
+}
+
+/* details card end */
